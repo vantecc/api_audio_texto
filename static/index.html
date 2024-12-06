@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor Áudio/Texto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Conversor Áudio ↔ Texto</h1>
+    <!-- Botões para alternar entre as abas -->
+    <div>
+        <button class="tab active" data-tab="audio-to-text">Áudio para Texto</button>
+        <button class="tab" data-tab="text-to-audio">Texto para Áudio</button>
+    </div>
+
+    <!-- Seção para "Áudio para Texto" -->
+    <div id="audio-to-text" class="content">
+        <h2>Áudio para Texto</h2>
+        <form id="audioToTextForm">
+            <input type="file" id="audioFile" name="audio" required>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="audioToTextResult"></div>
+    </div>
+
+    <!-- Seção para "Texto para Áudio" -->
+    <div id="text-to-audio" class="content hidden">
+        <h2>Texto para Áudio</h2>
+        <form id="textToAudioForm">
+            <textarea id="textInput" name="text" placeholder="Digite o texto..." required></textarea>
+            <select id="languageSelect" name="language">
+                <option value="pt">Português</option>
+                <option value="en">Inglês</option>
+            </select>
+            <button type="submit">Converter</button>
+        </form>
+        <div id="textToAudioResult"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
